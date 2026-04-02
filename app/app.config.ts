@@ -45,23 +45,30 @@ export default defineAppConfig({
 
 		stats: {
 			/** 归档页面每年标题对应的年龄 */
-			birthYear: 2003,
+			birthYear: 2007,
 			/** blog-stats widget 的预置文本 */
 			wordCount: '约10万',
+		},
+
+		/** 社区/联系方式挂件 */
+		comm: {
+			/** 是否显示纸网接入点(QQ群) Banner */
+			show: false,
 		},
 	},
 
 	// @keep-sorted
 	footer: {
 		/** 页脚版权信息，支持 <br> 换行等 HTML 标签 */
-		copyright: `© ${Temporal.Now.plainDateISO().year.toString()} ${blogConfig.author.name}`,
+		copyright: `© ${Temporal.Now.plainDateISO().year.toString()} ${blogConfig.title} · <a href="https://github.com/Mapleawaa/blog-v3" target="_blank" rel="noopener noreferrer">主题: ${pascalCase(name)} ${version}</a>`,
 		/** 侧边栏底部图标导航 */
 		iconNav: [
-			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
-			{ icon: 'ri:qq-line', text: '交流群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
-			{ icon: 'ph:github-logo-bold', text: 'GitHub: L33Z22L11', url: 'https://github.com/L33Z22L11' },
+			{ icon: 'ph:house-bold', text: '博客首页', url: blogConfig.url },
+			{ icon: 'ph:github-logo-bold', text: 'GitHub', url: 'https://github.com/Mapleawaa' },
+			{ icon: 'simple-icons:gitee', text: 'Gitee', url: 'https://gitee.com/Mapleawaa' },
+			{ icon: 'simple-icons:telegram', text: 'Telegram', url: 'https://t.me/Omphalos2_bot' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/' },
+			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
 		nav: [
@@ -69,23 +76,36 @@ export default defineAppConfig({
 				title: '探索',
 				items: [
 					{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-					{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/' },
+					{ icon: 'ph:chart-bar-bold', text: '站点统计', url: 'https://cloud.umami.is/share/MMyogXhfs1LNyQd0' },
+					{ icon: 'ph:subway-bold', text: '开往?', url: 'https://www.travellings.cn/go.html' },
+					{ icon: 'ph:monitor-bold', text: '状态监控', url: 'https://status.oowo.cc' },
 				],
 			},
 			{
 				title: '社交',
 				items: [
-					{ icon: 'ph:github-logo-bold', text: 'L33Z22L11', url: 'https://github.com/L33Z22L11' },
-					{ icon: 'ri:qq-line', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
+					{ icon: 'ph:github-logo-bold', text: 'Github', url: 'https://github.com/Mapleawaa' },
+					{ icon: 'simple-icons:telegram', text: 'Telegram', url: 'https://t.me/Omphalos2_bot' },
 					{ icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
 			},
 			{
 				title: '信息',
 				items: [
-					{ icon: 'simple-icons:nuxt', text: `主题: ${pascalCase(name)} ${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
-					{ icon: 'ph:swatches-bold', text: '主题和组件文档', url: '/theme' },
-					{ icon: 'ph:certificate-bold', text: '陕ICP备2025082251号', url: 'https://beian.miit.gov.cn/' },
+					{ icon: 'ph:certificate-bold', text: '萌ICP备20265520号', url: 'https://icp.gov.moe/?keyword=20265520' },
+					{ icon: 'ph:globe-hemisphere-west-bold', text: '博客域名', url: blogConfig.url },
+					{ icon: 'zi:tencentcloud', text: 'EdgeOne', url: 'https://edgeone.ai' },
+					{ icon: 'simple-icons:cloudflare', text: 'Cloudflare', url: 'https://www.cloudflare.com' },
+				],
+			},
+			{
+				title: '小工具集',
+				items: [
+					{ icon: 'ph:image-bold', text: '封面图生成', url: 'https://cover.oowo.cc' },
+					{ icon: 'ph:network-bold', text: '测试NAT类型', url: 'https://nat.oowo.cc' },
+					{ icon: 'ph:link-bold', text: '短链', url: 'https://url.oowo.cc' },
+					{ icon: 'ph:list-dashes-bold', text: 'OpenList', url: 'https://list.oowo.cc' },
+					{ icon: 'ph:plug-bold', text: 'API开放平台', url: 'https://api.oowo.cc' },
 				],
 			},
 		] satisfies Nav,
@@ -93,11 +113,11 @@ export default defineAppConfig({
 
 	/** 左侧栏顶部 Logo */
 	header: {
-		logo: 'https://weavatar.com/avatar/47c0f2e82b76d9b10eb3023df9e02e4e3fdbeaf5b74b842063f207971e7fbe7b?s=160',
+		logo: '/assets/avatar.gif',
 		/** 展示标题文本，否则展示纯 Logo */
 		showTitle: true,
 		subtitle: blogConfig.subtitle,
-		emojiTail: ['📄', '🦌', '🙌', '🐟', '🏖️'],
+		emojiTail: ['☁️', '🌇', '🌙', '🐱', '🚀'],
 	},
 
 	/** 友链页面 */
@@ -116,6 +136,8 @@ export default defineAppConfig({
 				{ icon: 'ph:files-bold', text: '文章', url: '/' },
 				{ icon: 'ph:link-bold', text: '友链', url: '/link' },
 				{ icon: 'ph:archive-bold', text: '归档', url: '/archive' },
+				{ icon: 'ph:chart-bar-bold', text: '统计', url: 'https://cloud.umami.is/share/MMyogXhfs1LNyQd0' },
+				{ icon: 'ph:monitor-bold', text: '状态', url: 'https://status.oowo.cc' },
 			],
 		},
 	] satisfies Nav,

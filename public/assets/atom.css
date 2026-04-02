@@ -8,7 +8,7 @@
 	--xsl-shadow-2: 0 0.4em 0.5em rgb(0 0 0 / 15%);
 
 	background-color: var(--xsl-bg-1);
-	font-family: Inter, sans-serif;
+	font-family: "LXGW WenKai", Inter, sans-serif;
 	line-height: 1.6;
 	text-autospace: normal;
 	color: var(--xsl-text-1);

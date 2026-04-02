@@ -14,7 +14,7 @@
 	background-color: var(--c-bg-1);
 	font-family: sans-serif;
 	font-family: var(--font-basic);
-	font-synthesis: style;
+	font-synthesis: weight;
 	line-height: 1.4;
 	text-autospace: normal;
 	text-size-adjust: none;
@@ -23,7 +23,6 @@
 	scroll-behavior: smooth;
 	scroll-padding: 2rem;
 	scrollbar-color: var(--c-text-3) transparent;
-	font-variant-alternates: styleset(open-digits, disambiguation, round-quotes-and-commas);
 	-webkit-tap-highlight-color: var(--c-primary-soft);
 
 	&:dir(rtl) {

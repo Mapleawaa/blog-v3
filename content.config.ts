@@ -22,6 +22,7 @@ export interface ArticleSchema {
 	recommend?: number
 	references?: { title?: string, link?: string }[]
 	/** TODO */
+
 	draft?: boolean
 	permalink?: string
 

@@ -1,6 +1,8 @@
 ---
 title: 主题
 hideInfo: true
+date: 2024-01-01 00:00:00
+updated: 2024-01-01 00:00:00
 
 aside: [toc, meta-aside-github]
 ---

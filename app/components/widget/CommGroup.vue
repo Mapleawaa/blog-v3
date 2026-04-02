@@ -1,5 +1,10 @@
+<script setup lang="ts">
+const { component } = useAppConfig()
+</script>
+
 <template>
 <BlogWidget
+	v-if="component.comm.show"
 	card
 	dim
 	title="博客/技术社区"

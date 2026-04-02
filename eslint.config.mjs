@@ -1,7 +1,12 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
-	ignores: ['*.yaml'],
+	ignores: [
+		'*.yaml',
+		'AGENTS.md',
+		'README.md',
+		'mizuki/**',
+	],
 	stylistic: {
 		indent: 'tab',
 	},

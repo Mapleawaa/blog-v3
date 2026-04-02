@@ -59,6 +59,15 @@ const appConfig = useAppConfig()
 
 	p {
 		margin: 0.5em;
+
+		:deep(a) {
+			text-decoration: underline;
+			text-underline-offset: 0.15em;
+
+			&:hover {
+				color: var(--c-text);
+			}
+		}
 	}
 }
 </style>

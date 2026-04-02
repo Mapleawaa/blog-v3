@@ -79,7 +79,7 @@ export default defineEventHandler(async (event) => {
 		],
 		language: blogConfig.language, // RSS 2.0
 		generator: {
-			$uri: 'https://github.com/L33Z22L11/blog-v3',
+			$uri: 'https://github.com/Mapleawaa/blog-v3',
 			$version: packageJson.version,
 			_: pascalCase(packageJson.name),
 		},
