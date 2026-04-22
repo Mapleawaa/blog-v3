@@ -5,7 +5,7 @@ date: 2026-03-26 00:00:00
 updated: 2026-03-26 00:00:00
 categories: [生活]
 tags: [银行卡, VPS, 甲骨文, 教程, 避坑, 招商银行, 万事达卡]
-image: ''
+image: './assets/images/cover/cmb.png'
 recommend: 10
 ---
 

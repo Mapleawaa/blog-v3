@@ -5,6 +5,7 @@ date: 2025-11-10 00:00:00
 updated: 2025-11-10 00:00:00
 categories: [技术]
 tags: [VPS, 评测, 技术]
+image: './assets/images/cover/akile-jp.png'
 ---
 
 >[!WARNING]

@@ -4,6 +4,7 @@ description: "收集的常用脚本包括快捷配置脚本~"
 date: 2025-12-07 00:00:00
 updated: 2025-12-07 00:00:00
 categories: [技术]
+image: './assets/images/cover/vps.png'
 tags: [脚本, VPS]
 ---
 

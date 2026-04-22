@@ -5,6 +5,7 @@ date: 2026-01-04 00:00:00
 updated: 2026-01-04 00:00:00
 categories: [技术]
 tags: [运维, 杂谈, DDoS, Vercel, EdgeOne]
+image: './assets/images/cover/ddos.png'
 recommend: 5
 ---
 本站建站之初坚持使用 **静态 (Static)** 架构，就是为了防这一手。

@@ -3,6 +3,7 @@ title: "关于AI Code 客户端 Qwen-Code 的小白吐槽"
 description: "二开Gemini CLI的工具都要先保持质疑！！！"
 date: 2025-10-13 00:00:00
 updated: 2025-10-13 00:00:00
+image: './assets/images/cover/fuckqwen.png'
 categories: [开发]
 tags: [随笔, 开发]
 ---

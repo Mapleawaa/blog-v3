@@ -4,6 +4,8 @@ description: "''"
 date: 2025-09-01 12:35:00
 updated: 2025-09-01 12:35:00
 categories: [技术]
+image: './assets/images/cover/pve.png'
+recommend: 10
 tags: [Linux, PVE, 优化, 脚本]
 ---
 

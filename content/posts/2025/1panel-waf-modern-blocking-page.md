@@ -4,6 +4,8 @@ description: "一个用于 1Panel WAF 的现代化的拦截页面"
 date: 2025-10-02 00:00:00
 updated: 2025-10-02 00:00:00
 categories: [技术]
+image: './assets/images/cover/1panel-waf.png'
+recommend: 10
 tags: [随笔, 开发]
 ---
 
