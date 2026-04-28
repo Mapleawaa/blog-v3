@@ -9,7 +9,7 @@ const basicConfig = {
 		name: 'Maple',
 		avatar: '/assets/avatar.jpg',
 		email: 'contact@oowo.cc',
-		homepage: 'https://blog.oowo.cc',
+		homepage: 'https://blog.ciriu.com',
 	},
 	copyright: {
 		abbr: 'CC BY-NC-SA 4.0',
@@ -20,7 +20,7 @@ const basicConfig = {
 	language: 'zh-CN',
 	timeEstablished: '2025-08-01',
 	timeZone: 'Asia/Shanghai',
-	url: 'https://blog.oowo.cc/',
+	url: 'https://blog.ciriu.com/',
 	defaultCategory: '未分类',
 }
 

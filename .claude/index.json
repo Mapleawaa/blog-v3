@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-04-29T00:12:11+08:00",
+  "project": "blog-v3",
+  "projectName": "Clarity",
+  "version": "3.6.4",
+  "framework": "Nuxt 4 + Vue 3",
+  "summary": "基于 Nuxt 4 的个人博客项目，使用 Vue 3 Composition API、TypeScript、SCSS、@nuxt/content 做 Markdown 内容管理，Pinia 做状态管理，pnpm workspaces 管理依赖。",
+  "modules": [
+    {
+      "path": ".",
+      "name": "Root — 配置中心",
+      "description": "项目级配置文件：package.json、Nuxt 配置、ESLint/Stylelint 配置、pnpm workspace catalogs、Blog 站点配置、Redirects",
+      "language": "TypeScript / JSON / YAML",
+      "entryFiles": ["package.json", "nuxt.config.ts", "blog.config.ts", "content.config.ts"],
+      "hasTests": false,
+      "hasConfig": true,
+      "configFiles": ["eslint.config.mjs", "stylelint.config.mjs", "pnpm-workspace.yaml"]
+    },
+    {
+      "path": "app",
+      "name": "应用层 — Nuxt 3 App",
+      "description": "Vue 组件、页面、组合式函数、状态管理、类型定义、插件、静态资源",
+      "language": "Vue / TypeScript / SCSS",
+      "entryFiles": ["app/app.vue", "app/app.config.ts"],
+      "hasTests": false,
+      "hasConfig": true,
+      "configFiles": ["app/shiki.config.ts"],
+      "subdirectories": {
+        "components": "blog/, content/, partial/, popover/, post/, util/, widget/",
+        "composables": "useArticle, useCopy, usePagination, useToc, useWidgets",
+        "pages": "index, [...slug], archive, link, preview",
+        "stores": "content, layout, search",
+        "plugins": "easter-egg, init, tippy",
+        "types": "article, feed, nav",
+        "utils": "anim, img"
+      }
+    },
+    {
+      "path": "content",
+      "name": "内容层 — Markdown 文章管理",
+      "description": "博客文章（按年份组织）、预览页面、主题配置、友链配置",
+      "language": "Markdown / YAML front matter",
+      "entryFiles": ["content/theme.md", "content/link.md"],
+      "hasTests": false,
+      "hasConfig": false,
+      "subdirectories": {
+        "posts": "2020-2026 年的技术文章",
+        "previews": "预览/草稿文章"
+      }
+    },
+    {
+      "path": "server",
+      "name": "服务端 — API 路由",
+      "description": "Nitro 服务端 API 路由：站点统计、Atom 订阅源生成",
+      "language": "TypeScript",
+      "entryFiles": ["server/api/stats.get.ts", "server/routes/atom.xml.get.ts"],
+      "hasTests": false,
+      "hasConfig": false
+    },
+    {
+      "path": "modules/anti-mirror",
+      "name": "反镜像模块 — Anti-Mirror",
+      "description": "自定义 Nuxt 模块，检测恶意镜像站并自动跳回原始域名",
+      "language": "TypeScript",
+      "entryFiles": ["modules/anti-mirror/index.ts"],
+      "hasTests": false,
+      "hasConfig": false
+    },
+    {
+      "path": "remark-plugins",
+      "name": "内容处理插件 — Remark/Rehype Plugins",
+      "description": "自定义 Markdown 处理插件：ABC 乐谱渲染、Meta Slots 自定义区块",
+      "language": "TypeScript",
+      "entryFiles": ["remark-plugins/remark-music.ts", "remark-plugins/rehype-meta-slots.ts"],
+      "hasTests": false,
+      "hasConfig": false
+    },
+    {
+      "path": "scripts",
+      "name": "脚本工具 — CLI Scripts",
+      "description": "开发辅助脚本：新建文章、项目初始化、订阅源验证",
+      "language": "TypeScript",
+      "entryFiles": ["scripts/new-blog.ts", "scripts/init-project.ts"],
+      "hasTests": false,
+      "hasConfig": false,
+      "subdirectories": {
+        "framework": "check-all-feeds, get-feed, utils"
+      }
+    }
+  ],
+  "coverage": {
+    "estimatedTotalFiles": 155,
+    "deepReadFiles": 30,
+    "shallowScannedFiles": 125,
+    "coveragePercent": 81,
+    "truncated": false,
+    "truncatedReason": null
+  },
+  "gaps": [
+    {
+      "module": "app",
+      "missing": ["测试文件", "组件单元测试"],
+      "severity": "low"
+    },
+    {
+      "module": "content",
+      "missing": ["文章 schema 验证测试", "front matter 格式检查"],
+      "severity": "low"
+    },
+    {
+      "module": "server",
+      "missing": ["API 测试", "订阅源输出验证"],
+      "severity": "low"
+    }
+  ],
+  "nextSteps": [
+    "建议补充项目测试策略（如引入 Vitest 或 Playwright）",
+    "components/ 下有 50+ 组件，可按子目录进一步细分文档",
+    "public/ 目录为纯静态资源，无需深入文档"
+  ],
+  "ignoredPatterns": [
+    "node_modules/",
+    ".git/",
+    ".output/",
+    ".data/",
+    ".nuxt/",
+    ".nitro/",
+    ".cache/",
+    "dist/",
+    ".vercel/",
+    "*.log",
+    ".env*",
+    "pnpm-lock.yaml"
+  ]
+}

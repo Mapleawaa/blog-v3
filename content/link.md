@@ -25,7 +25,7 @@ Hello, 很高兴能在互联网的茫茫一角和你相遇！
 > **准备好了吗？通过以下任一方式告诉我你的信息吧！**
 >
 > 1. **（推荐）** 点击页面上方的 **"申请友链"** 按钮，通过评论系统提交。
-> 2. 发送邮件至 **<hi@zhilu.cyou>**。
+> 2. 发送邮件至 **<hello@ciriu.com>**。
 >
 > **请在申请中附上：**
 >
@@ -44,9 +44,9 @@ Hello, 很高兴能在互联网的茫茫一角和你相遇！
 
 ```
 - **网站名称**：Maple Blog
-- **网站地址**：<https://blog.oowo.cc>
+- **网站地址**：<https://blog.ciriu.com>
 - **网站描述**：趁着年轻，好好犯病。
-- **网站图标**：`https://blog.oowo.cc/assets/avatar.jpg`
+- **网站图标**：`https://blog.ciriu.com/assets/avatar.jpg`
 - **标签**：`Maple Blog`, `个人博客`
 ```
 
