@@ -101,7 +101,7 @@ export default defineAppConfig({
 			{
 				title: '小工具集',
 				items: [
-					{ icon: 'ph:image-bold', text: '封面图生成', url: 'https://cover.oowo.cc' },
+					{ icon: 'ph:image-bold', text: '封面图生成', url: 'https://cover.ciriu.com' },
 					{ icon: 'ph:network-bold', text: '测试NAT类型', url: 'https://nat.oowo.cc' },
 					{ icon: 'ph:link-bold', text: '短链', url: 'https://url.oowo.cc' },
 					{ icon: 'ph:list-dashes-bold', text: 'OpenList', url: 'https://list.oowo.cc' },
